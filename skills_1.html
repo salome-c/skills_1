@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Skills #1</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width" />
+            <style type="text/css">
+                body {
+                    background-color: #B26C6E;
+                    margin: auto;
+                    font-family: sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+
+                section {
+                    width: 70%;
+                }
+                
+                .containers {
+                    margin: 30px;
+                    background-color: #e7c1b8; 
+                    border-radius: 50px;
+                }
+
+                .skills {
+                    text-align: right;
+                    color: #E7C1B8;
+                    border-radius: 50px;
+                    padding: 5px 10px;
+                    margin: 0;
+                    background-color: #7d3737;
+                    white-space: nowrap;
+                }
+
+                .one {
+                    width: 90%; 
+                }
+
+                .one.animated {
+                    animation: quatre-vingt-dix 2s;
+                }
+
+                .two {
+                    width: 80%; 
+                }
+
+                .two.animated {
+                    animation: quatre-vingt 2s;
+                }
+
+                .three {
+                    width: 70%;
+                }
+
+                .three.animated {
+                    animation: soixante-dix 2s;
+                }
+
+                .four { 
+                    width: 60%; 
+                }
+
+                .four.animated {
+                    animation: soixante 2s;
+                }
+
+                .five {
+                    width: 30%; 
+                }
+
+                .five.animated {
+                    animation: trente 2s;
+                }
+
+                @keyframes trente {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 30%;
+                    }
+                }
+
+                @keyframes soixante {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 60%;
+                    }
+                }
+
+                @keyframes soixante-dix {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 70%;
+                    }
+                }
+
+                @keyframes quatre-vingt {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 80%;
+                    }
+                }
+
+                @keyframes quatre-vingt-dix {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 90%;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <section>
+                <div class="containers">
+                    <div class="skills one toanimate">#1</div>
+                </div>
+                <div class="containers">
+                    <div class="skills two toanimate">#2</div>
+                </div>
+                <div class="containers">
+                    <div class="skills three toanimate">#3</div>
+                </div>
+                <div class="containers">
+                    <div class="skills four toanimate">#4</div>
+                </div>
+                <div class="containers">
+                  <div class="skills five toanimate">#5</div>
+                </div>
+            </section>
+            <script type="text/javascript">
+                var skills;
+                var windowHeight;
+                function init() {
+                    skills = document.querySelectorAll('.toanimate');
+                    windowHeight = window.innerHeight;
+                }
+                function checkPosition() {
+                    for (var i = 0; i < skills.length; i++) {
+                        var element = skills[i];
+                        var positionFromTop = skills[i].getBoundingClientRect().top;
+                        if (positionFromTop - windowHeight <= 0) {
+                            element.classList.add('animated');
+                            element.classList.remove('toanimate');
+                        }
+                    }
+                }
+                window.addEventListener('scroll', checkPosition);
+                window.addEventListener('resize', init);
+                init();
+                checkPosition();
+            </script>
+        </body>
+    </html>
