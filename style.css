@@ -1,0 +1,128 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: sans-serif;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section {
+    width: 70%;
+}
+
+.containers {
+    margin: 30px;
+    background-color: #b1d4e0; 
+    border-radius: 50px;
+}
+
+.skills {
+    text-align: right;
+    color: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: #373741;
+    white-space: nowrap;
+}
+
+.one {
+    width: 90%; 
+}
+
+.one.animated {
+    animation: quatre-vingt-dix 2s;
+}
+
+.two {
+    width: 80%; 
+}
+
+.two.animated {
+    animation: quatre-vingt 2s;
+}
+
+.three {
+    width: 70%;
+}
+
+.three.animated {
+    animation: soixante-dix 2s;
+}
+
+.four { 
+    width: 60%; 
+}
+
+.four.animated {
+    animation: soixante 2s;
+}
+
+.five {
+    width: 30%; 
+}
+
+.five.animated {
+    animation: trente 2s;
+}
+
+@keyframes trente {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes soixante {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes soixante-dix {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes quatre-vingt {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes quatre-vingt-dix {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
